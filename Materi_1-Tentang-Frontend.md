@@ -1,47 +1,44 @@
 # Pengantar Frontend **Developer**
 
--   [Pengantar Frontend **Developer**](#pengantar-frontend-developer)
-    -   [Kenapa harus memilih frontend?](#kenapa-harus-memilih-frontend)
-    -   [Apa aja sih peluang karir di frontend ?](#apa-aja-sih-peluang-karir-di-frontend-)
-        -   [Melihat karir alumni dan mahasiswa ITS di bidang Frontend](#melihat-karir-alumni-dan-mahasiswa-its-di-bidang-frontend)
-        -   [Apa aja sih yang harus dikuasai oleh seorang frontend **developer**?](#apa-aja-sih-yang-harus-dikuasai-oleh-seorang-frontend-developer)
-        -   [Apakah akan terus belajar Frontend ?](#apakah-akan-terus-belajar-frontend-)
-    -   [Paradigma Frontend Developer](#paradigma-frontend-developer)
-        -   [Procedural Programing](#procedural-programing)
-            -   [Karakteristik Utama PP](#karakteristik-utama-pp)
-            -   [Contoh Kode Program Procedural](#contoh-kode-program-procedural)
-        -   [Object Oriented Programing](#object-oriented-programing)
-            -   [Karakteristik Utama OOP](#karakteristik-utama-oop)
-        -   [Functional Programing](#functional-programing)
-            -   [Karakteristik Utama FP](#karakteristik-utama-fp)
-            -   [Contoh Kode Program Functional](#contoh-kode-program-functional)
-        -   [Perbandingan Procedural Programing Vs Object Oriented Programing Vs Functional Programing](#perbandingan-procedural-programing-vs-object-oriented-programing-vs-functional-programing)
-    -   [Mengenal Frontend lebih dekat](#mengenal-frontend-lebih-dekat)
-        -   [Fungsi dalam Frontend: Async, Sync, Callback, dan Lainnya](#fungsi-dalam-frontend-async-sync-callback-dan-lainnya)
-            -   [Fungsi Sinkron (Synchronous Function)](#fungsi-sinkron-synchronous-function)
-            -   [Fungsi Asinkron (Asynchronous Function)](#fungsi-asinkron-asynchronous-function)
-            -   [Fungsi Callback (Callback Function)](#fungsi-callback-callback-function)
-            -   [Promise Function](#promise-function)
-            -   [Generator Function](#generator-function)
-            -   [Arrow Function](#arrow-function)
-    -   [Data Object Manipulation (DOM)](#data-object-manipulation-dom)
-        -   [Bagaiamanakah cara kerja DOM?](#bagaiamanakah-cara-kerja-dom)
-        -   [Cara Mengakses Elemen DOM](#cara-mengakses-elemen-dom)
-        -   [Praktik Latihan DOM](#praktik-latihan-dom)
-        -   [Summary](#summary)
-    -   [AJAX dan Fetch API](#ajax-dan-fetch-api)
-        -   [Praktik Latihan AJAX dan Fetch API](#praktik-latihan-ajax-dan-fetch-api)
-    -   [Framework Frontend](#framework-frontend)
-        -   [History of Frontend Framework](#history-of-frontend-framework)
-        -   [Package Manager](#package-manager)
-        -   [Library vs Framework](#library-vs-framework)
-        -   [Praktik Latihan Library Frontend](#praktik-latihan-library-frontend)
-    -   [Tugas](#tugas)
-        -   [Deskripsi](#deskripsi)
-        -   [Pengumpulan](#pengumpulan)
-        -   [Perlu Bantuan?](#perlu-bantuan)
-    -   [Penutup](#penutup)
-    -   [Referensi](#referensi)
+- [Pengantar Frontend **Developer**](#pengantar-frontend-developer)
+  - [Kenapa harus memilih frontend?](#kenapa-harus-memilih-frontend)
+  - [Apa aja sih peluang karir di frontend ?](#apa-aja-sih-peluang-karir-di-frontend-)
+    - [Melihat karir alumni dan mahasiswa ITS di bidang Frontend](#melihat-karir-alumni-dan-mahasiswa-its-di-bidang-frontend)
+    - [Apa aja sih yang harus dikuasai oleh seorang frontend **developer**?](#apa-aja-sih-yang-harus-dikuasai-oleh-seorang-frontend-developer)
+    - [Apakah akan terus belajar Frontend ?](#apakah-akan-terus-belajar-frontend-)
+  - [Paradigma Frontend Developer](#paradigma-frontend-developer)
+    - [Procedural Programing](#procedural-programing)
+      - [Karakteristik Utama PP](#karakteristik-utama-pp)
+      - [Contoh Kode Program Procedural](#contoh-kode-program-procedural)
+    - [Object Oriented Programing](#object-oriented-programing)
+      - [Karakteristik Utama OOP](#karakteristik-utama-oop)
+    - [Functional Programing](#functional-programing)
+      - [Karakteristik Utama FP](#karakteristik-utama-fp)
+      - [Contoh Kode Program Functional](#contoh-kode-program-functional)
+    - [Perbandingan Procedural Programing Vs Object Oriented Programing Vs Functional Programing](#perbandingan-procedural-programing-vs-object-oriented-programing-vs-functional-programing)
+  - [Mengenal Frontend lebih dekat](#mengenal-frontend-lebih-dekat)
+    - [Fungsi dalam Frontend: Async, Sync, Callback, dan Lainnya](#fungsi-dalam-frontend-async-sync-callback-dan-lainnya)
+      - [Fungsi Sinkron (Synchronous Function)](#fungsi-sinkron-synchronous-function)
+      - [Fungsi Asinkron (Asynchronous Function)](#fungsi-asinkron-asynchronous-function)
+      - [Fungsi Callback (Callback Function)](#fungsi-callback-callback-function)
+      - [Promise Function](#promise-function)
+      - [Generator Function](#generator-function)
+      - [Arrow Function](#arrow-function)
+  - [Data Object Manipulation (DOM)](#data-object-manipulation-dom)
+    - [Bagaiamanakah cara kerja DOM?](#bagaiamanakah-cara-kerja-dom)
+    - [Cara Mengakses Elemen DOM](#cara-mengakses-elemen-dom)
+    - [Praktik Latihan DOM](#praktik-latihan-dom)
+    - [Summary](#summary)
+  - [AJAX dan Fetch API](#ajax-dan-fetch-api)
+    - [Praktik Latihan AJAX dan Fetch API](#praktik-latihan-ajax-dan-fetch-api)
+  - [Framework Frontend](#framework-frontend)
+    - [History of Frontend Framework](#history-of-frontend-framework)
+    - [Package Manager](#package-manager)
+    - [Library vs Framework](#library-vs-framework)
+    - [Praktik Latihan Library Frontend](#praktik-latihan-library-frontend)
+    - [Perlu Bantuan?](#perlu-bantuan)
+  - [Penutup](#penutup)
+  - [Referensi](#referensi)
 
 ## Kenapa harus memilih frontend?
 
@@ -59,10 +56,10 @@ Banyak gak sih dari kita yang sering bertanya-tanya apa sih kelanjutan karir dar
 
 Jadi dilansir dari website [NetGuru](https://www.netguru.com/career/paths/frontend) terdapat 4 tahapan karir dalam frontend **developer** yaitu:
 
--   Junior Frontend **Developer**
--   Frontend **Developer**
--   Senior Frontend **Developer**
--   Frontend Software Architect
+- Junior Frontend **Developer**
+- Frontend **Developer**
+- Senior Frontend **Developer**
+- Frontend Software Architect
 
 Lalu bagaimana sih dengan lulusan para Frontend **developer** di Informatika ITS ini apakah mereka bisa hidup dengan nyaman dengan di frontend ini ?
 
@@ -72,14 +69,17 @@ Siapa aja sih yang sudah sukses di bidang frontend ini? Berikut adalah beberapa 
 
 ![Alumni](assets/modul-1/peserta.png)
 
--   Rizqi Tsani
--   lathifa Itqon
--   Muhammad Yunnus
--   Muhammad Dzikri Syairozi
--   Benedictus Wicaksono
--   Frederick Hidayat
--   Gabriella Natasya Br. Ginting
--   Robby Ulung Pambudi
+1. Lathifa Itqonina Mardiyati (Teknik Informatika 2019)
+2. Rizqi Tsani (Teknik Informatika 2019)
+3. Benedictus Wicaksono (Teknik Informatika 2020)
+4. Muhammad Dzikri Syairozi (Teknik Informatika 2020)
+5. Muhammad Yunus (Teknik Informatika 2020)
+6. Frederick Hidayat (Teknik Informatika 2021)
+7. Gabriella Natasya Br. Ginting (Teknik Informatika 2021)
+8. Robby Ulung Pambudi (Teknik Informatika 2021)
+9. Ainun Nadhifah Syamsiyah (Teknik Informatika 2022)
+10. Farrell Matthew Lim (Teknik Informatika 2022)
+11. Reynaldi Neo Ramadhani (Teknik Informatika 2022)
 
 Dan banyak lagi lainya, jadi jangan ragu untuk memilih frontend sebagai karir kalian nanti.
 
@@ -87,11 +87,11 @@ Dan banyak lagi lainya, jadi jangan ragu untuk memilih frontend sebagai karir ka
 
 Seorang frontend **developer** harus menguasai beberapa hal berikut ini:
 
--   HTML
--   CSS
--   JavaScript
--   Framework (React, Angular, Vue, dll)
--   Version Control (Git)
+- HTML
+- CSS
+- JavaScript
+- Framework (React, Angular, Vue, dll)
+- Version Control (Git)
 
 Yang tentunya teman-teman sudah belajar di matakuliah Pemrograman Web.
 
@@ -129,33 +129,33 @@ Karakteristik utama dari pemrograman prosedural meliputi:
 
 1. Modularity
 
-    Kode program dipecah menjadi fungsi atau prosedur yang lebih kecil dan masing masing bertanggung jawab untuk tugas tertentu
+   Kode program dipecah menjadi fungsi atau prosedur yang lebih kecil dan masing masing bertanggung jawab untuk tugas tertentu
 
 2. Function Call
 
-    Prosedur atau fungsi dapat dipanggil secara berurutan. Dan sering kali fungsi mengambil sebuah parameter input dan dikembalikan sebagai hasil output
+   Prosedur atau fungsi dapat dipanggil secara berurutan. Dan sering kali fungsi mengambil sebuah parameter input dan dikembalikan sebagai hasil output
 
 3. Global Variable
 
-    Program prosedural sering menggunakan variabel global untuk menyimpan data yang dapat diakses oleh beberapa fungsi. Namun, penggunaan variabel global yang berlebihan dapat menyebabkan masalah seperti efek samping yang tidak diinginkan dan kesulitan dalam memahami aliran data.
+   Program prosedural sering menggunakan variabel global untuk menyimpan data yang dapat diakses oleh beberapa fungsi. Namun, penggunaan variabel global yang berlebihan dapat menyebabkan masalah seperti efek samping yang tidak diinginkan dan kesulitan dalam memahami aliran data.
 
 4. Sequential Execution
 
-    program dieksekusi dalam urutan linier. Pernyataan dieksekusi satu demi satu, dan struktur kontrol seperti loop dan kondisional menentukan aliran eksekusi.
+   program dieksekusi dalam urutan linier. Pernyataan dieksekusi satu demi satu, dan struktur kontrol seperti loop dan kondisional menentukan aliran eksekusi.
 
 5. Limited Reusability
 
-    Penggunaan Ulang Terbatas: Meskipun fungsi meningkatkan penggunaan ulang dibandingkan dengan kode monolitik, fungsi biasanya terbatas untuk digunakan dalam program yang sama. Fungsi tidak dienkapsulasi dan dapat digunakan kembali seperti kelas dan objek dalam pemrograman berorientasi objek.
+   Penggunaan Ulang Terbatas: Meskipun fungsi meningkatkan penggunaan ulang dibandingkan dengan kode monolitik, fungsi biasanya terbatas untuk digunakan dalam program yang sama. Fungsi tidak dienkapsulasi dan dapat digunakan kembali seperti kelas dan objek dalam pemrograman berorientasi objek.
 
 #### Contoh Kode Program Procedural
 
 ```javascript
 function calculateArea(length, width) {
-    return length * width;
+  return length * width;
 }
 
 function calculateVolume(length, width, height) {
-    return length * width * height;
+  return length * width * height;
 }
 
 let area = calculateArea(10, 20);
@@ -174,37 +174,37 @@ Object-Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pad
 
 1. **Object**
 
-    - Objek adalah entitas yang memiliki atribut (data) dan metode (fungsi) yang dapat dijalankan.
-    - Contoh: Jika kita berbicara tentang mobil, objeknya bisa menjadi "Mobil BMW X3" dengan atribut seperti warna, kecepatan, dan metode seperti "hidupkan mesin".
+   - Objek adalah entitas yang memiliki atribut (data) dan metode (fungsi) yang dapat dijalankan.
+   - Contoh: Jika kita berbicara tentang mobil, objeknya bisa menjadi "Mobil BMW X3" dengan atribut seperti warna, kecepatan, dan metode seperti "hidupkan mesin".
 
 2. **Class**
 
-    - Kelas adalah cetak biru atau blueprint untuk membuat objek.
-    - Contoh: Jika "Mobil BMW X3" adalah objek, maka "Mobil" adalah kelas yang mendefinisikan bagaimana objek mobil harus dibuat dan memiliki atribut/metode apa.
+   - Kelas adalah cetak biru atau blueprint untuk membuat objek.
+   - Contoh: Jika "Mobil BMW X3" adalah objek, maka "Mobil" adalah kelas yang mendefinisikan bagaimana objek mobil harus dibuat dan memiliki atribut/metode apa.
 
 3. **Atribut**
 
-    - Atribut adalah karakteristik atau data yang dimiliki oleh objek.
-    - Contoh: Dalam kelas "Mobil", atributnya bisa menjadi "warna", "kecepatan", dan lainnya.
+   - Atribut adalah karakteristik atau data yang dimiliki oleh objek.
+   - Contoh: Dalam kelas "Mobil", atributnya bisa menjadi "warna", "kecepatan", dan lainnya.
 
 4. **Metode**
 
-    - Metode adalah fungsi atau tindakan yang dapat dilakukan oleh objek.
-    - Contoh: Dalam kelas "Mobil", metodenya bisa menjadi "hidupkanMesin()", "matikanMesin()", atau "percepat()".
+   - Metode adalah fungsi atau tindakan yang dapat dilakukan oleh objek.
+   - Contoh: Dalam kelas "Mobil", metodenya bisa menjadi "hidupkanMesin()", "matikanMesin()", atau "percepat()".
 
 5. **Inheritance (Pewarisan)**
 
-    - Pewarisan memungkinkan kelas baru ("subclass" atau "child class") untuk mewarisi atribut dan metode dari kelas yang sudah ada ("superclass" atau "parent class").
-    - Contoh: Jika ada kelas "Truk" dan kelas "Mobil" sebagai superclass, maka "Truk" dapat mewarisi atribut dan metode dari "Mobil".
+   - Pewarisan memungkinkan kelas baru ("subclass" atau "child class") untuk mewarisi atribut dan metode dari kelas yang sudah ada ("superclass" atau "parent class").
+   - Contoh: Jika ada kelas "Truk" dan kelas "Mobil" sebagai superclass, maka "Truk" dapat mewarisi atribut dan metode dari "Mobil".
 
 6. **Polimorfisme**
 
-    - Polimorfisme memungkinkan objek dari kelas yang berbeda untuk merespons metode dengan cara yang sama.
-    - Contoh: Metode "bersuara()" dapat digunakan baik oleh objek "Anjing" maupun "Kucing", dan keduanya mengeluarkan suara yang berbeda.
+   - Polimorfisme memungkinkan objek dari kelas yang berbeda untuk merespons metode dengan cara yang sama.
+   - Contoh: Metode "bersuara()" dapat digunakan baik oleh objek "Anjing" maupun "Kucing", dan keduanya mengeluarkan suara yang berbeda.
 
 7. **Enkapsulasi**
-    - Enkapsulasi melibatkan penyembunyian detail implementasi dari dunia luar dan membatasi akses langsung ke beberapa bagian dari objek.
-    - Contoh: Dengan menggunakan enkapsulasi, kita dapat membatasi akses langsung ke atribut seperti "saldoBank" dalam objek "RekeningBank".
+   - Enkapsulasi melibatkan penyembunyian detail implementasi dari dunia luar dan membatasi akses langsung ke beberapa bagian dari objek.
+   - Contoh: Dengan menggunakan enkapsulasi, kita dapat membatasi akses langsung ke atribut seperti "saldoBank" dalam objek "RekeningBank".
 
 Tentunya hal-hal diatas sudah tidak asing lagi bagi kalian karena sudah pernah dipelajari di kelas `Pemrograman Berbasis Kerangka Kerja`.
 
@@ -218,40 +218,40 @@ OOP sendiri masih dipakai di library yang sangat terkenal bagi kita yaitu “Rea
 
 1. **Fungsi sebagai Warga Kelas Satu**:
 
-    - Fungsi bukan hanya subrutin, tetapi entitas yang dapat dimanipulasi seperti data.
-    - Fungsi dapat diteruskan sebagai argumen, dikembalikan sebagai nilai, dan diikat ke variabel.
+   - Fungsi bukan hanya subrutin, tetapi entitas yang dapat dimanipulasi seperti data.
+   - Fungsi dapat diteruskan sebagai argumen, dikembalikan sebagai nilai, dan diikat ke variabel.
 
 2. **Imutabilitas**
 
-    - Data dalam program fungsional tidak dapat diubah setelah diinisialisasi.
-    - Hal ini meningkatkan prediktabilitas dan memudahkan debugging.
+   - Data dalam program fungsional tidak dapat diubah setelah diinisialisasi.
+   - Hal ini meningkatkan prediktabilitas dan memudahkan debugging.
 
 3. **Rekursi**
 
-    - Fungsi dapat memanggil diri sendiri untuk memecah masalah kompleks menjadi sub-masalah yang lebih kecil.
-    - Rekursi memungkinkan solusi elegan untuk masalah seperti perhitungan faktorial dan traversal struktur data.
+   - Fungsi dapat memanggil diri sendiri untuk memecah masalah kompleks menjadi sub-masalah yang lebih kecil.
+   - Rekursi memungkinkan solusi elegan untuk masalah seperti perhitungan faktorial dan traversal struktur data.
 
 4. **Komposisi Fungsi**
-    - Fungsi-fungsi kecil dapat digabungkan untuk membentuk fungsi yang lebih kompleks.
-    - Komposisi fungsi meningkatkan modularitas dan keterbacaan kode.
+   - Fungsi-fungsi kecil dapat digabungkan untuk membentuk fungsi yang lebih kompleks.
+   - Komposisi fungsi meningkatkan modularitas dan keterbacaan kode.
 
 #### Contoh Kode Program Functional
 
 ```typescript
 // Fungsi murni untuk menghitung total penjualan
 const totalPenjualan = (
-    produkList: { harga: number; jumlah: number }[]
+  produkList: { harga: number; jumlah: number }[]
 ): number => {
-    return produkList.reduce(
-        (total, produk) => total + produk.harga * produk.jumlah,
-        0
-    );
+  return produkList.reduce(
+    (total, produk) => total + produk.harga * produk.jumlah,
+    0
+  );
 };
 
 // Contoh penggunaan
 const produkList = [
-    { harga: 10, jumlah: 2 },
-    { harga: 5, jumlah: 3 },
+  { harga: 10, jumlah: 2 },
+  { harga: 5, jumlah: 3 },
 ];
 
 const total = totalPenjualan(produkList);
@@ -294,14 +294,14 @@ Bayangkan kita sedang memasak makanan. Setiap langkah dalam resep harus diselesa
 
 Dalam Frontend Developer Fungsi sinkron ideal untuk tugas-tugas sederhana yang tidak memerlukan waktu lama untuk dijalankan, seperti:
 
--   Manipulasi data lokal
--   Perhitungan sederhana
--   Pengambilan keputusan berdasarkan data yang sudah tersedia
+- Manipulasi data lokal
+- Perhitungan sederhana
+- Pengambilan keputusan berdasarkan data yang sudah tersedia
 
 ```typescript
 function addNumbers(a, b) {
-    // Penjumlahan dua angka
-    return a + b;
+  // Penjumlahan dua angka
+  return a + b;
 }
 const result = addNumbers(5, 3);
 console.log(result); // Output: 8
@@ -334,14 +334,14 @@ Budi ingin membuat sebuah program yang menampilkan daftar nama 5 orang secara be
 ```typescript
 const names = ["Andi", "Budi", "Cici", "Doni", "Eko"];
 function displayNames() {
-    for (let i = 0; i < names.length; i++) {
-        setTimeout(() => {
-            console.log(names[i]);
-        }, i * 1000);
-    }
+  for (let i = 0; i < names.length; i++) {
     setTimeout(() => {
-        console.log("hallo");
-    }, 2000);
+      console.log(names[i]);
+    }, i * 1000);
+  }
+  setTimeout(() => {
+    console.log("hallo");
+  }, 2000);
 }
 
 displayNames();
@@ -355,23 +355,23 @@ Fungsi callback adalah fungsi yang dipassed sebagai argumen ke fungsi lain dan d
 
 ```typescript
 function fetchData(url, callback) {
-    // Lakukan fetch data dari URL
-    // ...
+  // Lakukan fetch data dari URL
+  // ...
 
-    // Ketika data selesai diambil, panggil callback dengan data tersebut
-    callback(data);
+  // Ketika data selesai diambil, panggil callback dengan data tersebut
+  callback(data);
 }
 
 fetchData("https://api.example.com/data", (data) => {
-    console.log(data); // Data tersedia setelah fetching selesai
+  console.log(data); // Data tersedia setelah fetching selesai
 });
 ```
 
 **Kapan menggunakan fungsi callback?**
 
--   `Operasi asinkron`: Ketika Anda perlu menunggu hasil dari operasi asinkron (misalnya, fetching data dari API), Anda dapat menggunakan callback untuk menangani hasil tersebut setelah tersedia.
+- `Operasi asinkron`: Ketika Anda perlu menunggu hasil dari operasi asinkron (misalnya, fetching data dari API), Anda dapat menggunakan callback untuk menangani hasil tersebut setelah tersedia.
 
--   `Event handling`: Callback sering digunakan dalam event handling untuk menjalankan kode tertentu ketika event terjadi (misalnya, klik tombol).
+- `Event handling`: Callback sering digunakan dalam event handling untuk menjalankan kode tertentu ketika event terjadi (misalnya, klik tombol).
 
 #### Promise Function
 
@@ -385,24 +385,24 @@ Seperti itulah analogi dari penjelasan promise function dalam kegiatan kita seha
 
 ```typescript
 function fetchData(url) {
-    return new Promise((resolve, reject) => {
-        // Lakukan fetch data dari URL
+  return new Promise((resolve, reject) => {
+    // Lakukan fetch data dari URL
 
-        if (sukses) {
-            resolve(data); // resolve dengan data jika sukses
-        } else {
-            reject(error); // reject dengan error jika gagal
-        }
-    });
+    if (sukses) {
+      resolve(data); // resolve dengan data jika sukses
+    } else {
+      reject(error); // reject dengan error jika gagal
+    }
+  });
 }
 
 fetchData("https://api.example.com/data")
-    .then((data) => {
-        console.log("Data diterima:", data);
-    })
-    .catch((error) => {
-        console.error("Error:", error);
-    });
+  .then((data) => {
+    console.log("Data diterima:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 ```
 
 Lalu apa bedanya dengan `.then()` dan `.catch()` kan bisa aja tuh ditaruh didalam situ tanpa harus menggunakan Promise? kalau kita lihat penjelasan diatas kita bisa tarik sebuah perbedaan bahwa promise itu hanya sebatas Janji sedangkan then dan `catch` adalah apa yang akan dilakukan ketika mendapat sebuah kegagalan atau kesuksesan dalam pemanggilan.
@@ -419,9 +419,9 @@ Generator function sangat berguna dalam menghasilkan nilai secara bertahap, sepe
 
 ```typescript
 function* generateNumbers() {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 }
 
 const numbers = generateNumbers();
@@ -449,10 +449,10 @@ Pasti teman-teman sudah tidak asing dengan materi pembahasan kali ini yaitu DOM.
 
 Dengan memanipulasi DOM, Anda dapat secara dinamis mengubah tampilan dan perilaku halaman web. Ini termasuk tugas-tugas seperti:
 
--   **Menambahkan atau menghapus elemen**: Anda dapat membuat elemen HTML baru dan menambahkannya ke DOM, atau menghapus elemen yang ada sepenuhnya.
--   **Mengubah konten**: Anda dapat mengubah konten teks elemen, memperbarui atribut, dan menyesuaikan gaya.
--   **Menanggapi peristiwa**: Anda dapat melampirkan pendengar peristiwa ke elemen, sehingga kode Anda dapat bereaksi terhadap interaksi pengguna seperti klik, penekanan tombol, atau pengiriman formulir.
--   **Membangun antarmuka interaktif**: Dengan memanipulasi DOM, Anda dapat membuat aplikasi web yang dinamis dan interaktif.
+- **Menambahkan atau menghapus elemen**: Anda dapat membuat elemen HTML baru dan menambahkannya ke DOM, atau menghapus elemen yang ada sepenuhnya.
+- **Mengubah konten**: Anda dapat mengubah konten teks elemen, memperbarui atribut, dan menyesuaikan gaya.
+- **Menanggapi peristiwa**: Anda dapat melampirkan pendengar peristiwa ke elemen, sehingga kode Anda dapat bereaksi terhadap interaksi pengguna seperti klik, penekanan tombol, atau pengiriman formulir.
+- **Membangun antarmuka interaktif**: Dengan memanipulasi DOM, Anda dapat membuat aplikasi web yang dinamis dan interaktif.
 
 ### Bagaiamanakah cara kerja DOM?
 
@@ -465,13 +465,13 @@ Contoh sederhana dari DOM adalah sebagai berikut:
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Contoh DOM</title>
-    </head>
-    <body>
-        <h1>Hello, World!</h1>
-        <p>Selamat datang di contoh DOM.</p>
-    </body>
+  <head>
+    <title>Contoh DOM</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>Selamat datang di contoh DOM.</p>
+  </body>
 </html>
 ```
 
@@ -513,9 +513,9 @@ Contoh penggunaan Fetch API:
 
 ```javascript
 fetch("https://api.example.com/data")
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
+  .then((response) => response.json())
+  .then((data) => console.log(data))
+  .catch((error) => console.error(error));
 ```
 
 Dalam contoh ini, kita menggunakan fetch() untuk mengambil data dari URL tertentu. Kemudian, kita menggunakan .then() untuk menangani respons yang diterima, dan .catch() untuk menangani kesalahan yang terjadi.
@@ -526,9 +526,9 @@ Contoh penggunaan AJAX:
 const xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.example.com/data", true);
 xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log(JSON.parse(xhr.responseText));
-    }
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    console.log(JSON.parse(xhr.responseText));
+  }
 };
 xhr.send();
 ```
@@ -607,11 +607,11 @@ Sekian dari kita, semoga materi ini bermanfaat bagi teman - teman semua. Jangan 
 
 ## Referensi
 
--   <https://www.encora.com/insights/class-components-vs-functional-components-in-react>
--   <https://react.dev/reference/react/Component>
--   <https://www.wired.com/2015/09/whatsapp-serves-900-million-users-50-engineers/>
--   <https://www.mendix.com/blog/asynchronous-vs-synchronous-programming/>
--   "Eloquent JavaScript" by Marijn Haverbeke
--   [Refactoring Guru](https://refactoring.guru/design-patterns)
--   Clean Code by Robert C. Martin
--   Refactoring Improving the Design of Existing Code
+- <https://www.encora.com/insights/class-components-vs-functional-components-in-react>
+- <https://react.dev/reference/react/Component>
+- <https://www.wired.com/2015/09/whatsapp-serves-900-million-users-50-engineers/>
+- <https://www.mendix.com/blog/asynchronous-vs-synchronous-programming/>
+- "Eloquent JavaScript" by Marijn Haverbeke
+- [Refactoring Guru](https://refactoring.guru/design-patterns)
+- Clean Code by Robert C. Martin
+- Refactoring Improving the Design of Existing Code
