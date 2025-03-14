@@ -597,7 +597,7 @@ Selamat Menonton :)
 
 Teman - teman bisa bertanya di grup atau langsung ke asisten terkait. Jangan sungkan untuk bertanya karena kita disini saling belajar.
 
-Atau bisa juga langsung ke [Github Discussion](https://github.com/Lab-RPL-ITS/Modul-Oprec-FE-2025/discussions) untuk bertanya - tanya.
+Atau bisa juga langsung bertanya - tanya di grup WA.
 
 ## Penutup
 
