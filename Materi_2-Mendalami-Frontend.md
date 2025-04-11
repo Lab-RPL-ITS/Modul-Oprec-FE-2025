@@ -18,12 +18,11 @@ Sesuai dengan materi sebelumnya, kita telah mempelajari beberapa library yang di
 1. Tanstack
 2. React Hook Form
 
-
 ### Tanctack
 
 ![TQ](./assets/modul-2/tq.png)
 
-Tanstack adalah *open source* yang berfokus pada pengembangan aplikasi web. Tanstack memiliki beberapa library yang digunakan dalam pengembangan aplikasi web, diantaranya:
+Tanstack adalah _open source_ yang berfokus pada pengembangan aplikasi web. Tanstack memiliki beberapa library yang digunakan dalam pengembangan aplikasi web, diantaranya:
 
 1. [Tanstack Query](https://tanstack.com/query/latest)
 2. [Tanstack Table](https://tanstack.com/table/latest)
@@ -36,19 +35,19 @@ dan masih banyak lagi, yang dapat dilihat di [sini](https://tanstack.com/)
 TanStack Query adalah sebuah library JavaScript yang digunakan untuk membuat query bahasa pemrograman dengan cara yang lebih deklaratif dan mudah dipahami. Library ini memiliki beberapa kegunaan yang dapat mempermudah pengembangan aplikasi web. Berikut adalah beberapa kegunaan dari library TanStack Query:
 
 1. Deklaratif dan Mudah Dipahami:
-  TanStack Query memungkinkan pengembang untuk menulis query dengan cara yang lebih deklaratif, sehingga kode menjadi lebih mudah dipahami dan dikelola.
+   TanStack Query memungkinkan pengembang untuk menulis query dengan cara yang lebih deklaratif, sehingga kode menjadi lebih mudah dipahami dan dikelola.
 
 2. Pengelolaan State yang Efisien:
-  Library ini membantu dalam pengelolaan state aplikasi dengan menyediakan cara yang efisien untuk mengambil dan menyimpan data. Hal ini dapat meningkatkan kinerja aplikasi dan mengurangi kompleksitas kode.
+   Library ini membantu dalam pengelolaan state aplikasi dengan menyediakan cara yang efisien untuk mengambil dan menyimpan data. Hal ini dapat meningkatkan kinerja aplikasi dan mengurangi kompleksitas kode.
 
 3. Optimalisasi Query:
-  TanStack Query memungkinkan pengoptimalan query, sehingga hanya data yang diperlukan yang diambil dari server. Ini dapat mengurangi beban jaringan dan mempercepat waktu respon aplikasi.
+   TanStack Query memungkinkan pengoptimalan query, sehingga hanya data yang diperlukan yang diambil dari server. Ini dapat mengurangi beban jaringan dan mempercepat waktu respon aplikasi.
 
 4. Integrasi Dengan Berbagai Backend:
-  Dengan TanStack Query, pengembang dapat dengan mudah mengintegrasikan aplikasi dengan berbagai backend dan sumber data, termasuk REST API, GraphQL, dan banyak lagi.
+   Dengan TanStack Query, pengembang dapat dengan mudah mengintegrasikan aplikasi dengan berbagai backend dan sumber data, termasuk REST API, GraphQL, dan banyak lagi.
 
 5. Type Safety:
-  Library ini mendukung type safety, sehingga kesalahan tipe dapat terdeteksi lebih awal dalam proses pengembangan. Ini membantu mencegah kesalahan yang umum terkait dengan tipe data.
+   Library ini mendukung type safety, sehingga kesalahan tipe dapat terdeteksi lebih awal dalam proses pengembangan. Ini membantu mencegah kesalahan yang umum terkait dengan tipe data.
 
 Dengan kombinasi fitur-fitur di atas, TanStack Query membantu pengembang dalam membuat aplikasi web yang efisien, mudah dipahami, dan dapat diintegrasikan dengan berbagai sumber data.
 
@@ -57,47 +56,48 @@ Mari kita lihat contoh penggunaan TanStack Query:
 ##### UseQuery
 
 ```typescript
+const { isPending, error, data, isFetching } = useQuery({
+  queryKey: ["repoData"],
+  queryFn: () =>
+    axios
+      .get("https://api.github.com/repos/tannerlinsley/react-query")
+      .then((res) => res.data),
+});
 
- const { isPending, error, data, isFetching } = useQuery({
-    queryKey: ['repoData'],
-    queryFn: () =>
-      axios
-        .get('https://api.github.com/repos/tannerlinsley/react-query')
-        .then((res) => res.data),
-  })
+if (isPending) return "Loading...";
 
-  if (isPending) return 'Loading...'
-
-  if (error) return 'An error has occurred: ' + error.message
+if (error) return "An error has occurred: " + error.message;
 ```
 
-- `useQuery` adalah *hook* yang digunakan untuk melakukan *query* ke *server*.
-- `queryKey` adalah *key* yang digunakan untuk mengidentifikasi *query*.
-- `queryFn` adalah *function* yang digunakan untuk melakukan *query* ke *server*.
+- `useQuery` adalah _hook_ yang digunakan untuk melakukan _query_ ke _server_.
+- `queryKey` adalah _key_ yang digunakan untuk mengidentifikasi _query_.
+- `queryFn` adalah _function_ yang digunakan untuk melakukan _query_ ke _server_.
 
-Apabila kita tulis kode di tanpa menggunakan `useQuery`, maka kita harus melakukan *caching* secara manual.
+Apabila kita tulis kode di tanpa menggunakan `useQuery`, maka kita harus melakukan _caching_ secara manual.
 
 ```typescript
-const [data, setData] = useState(null)
-const [error, setError] = useState(null)
+const [data, setData] = useState(null);
+const [error, setError] = useState(null);
 
 const fetchData = async () => {
   try {
-    const res = await axios.get('https://api.github.com/repos/tannerlinsley/react-query')
-    setData(res.data)
+    const res = await axios.get(
+      "https://api.github.com/repos/tannerlinsley/react-query"
+    );
+    setData(res.data);
   } catch (err) {
-    setError(err)
+    setError(err);
   }
-}
+};
 
 useEffect(() => {
-  fetchData()
-}, [])
+  fetchData();
+}, []);
 ```
 
-Dari contoh di atas, kita dapat melihat bahwa penggunaan `useQuery` lebih mudah dan efisien dibandingkan dengan melakukan *caching* secara manual. Dengan menggunakan `useQuery`, kita dapat mengelola *state* dengan lebih baik dan mengoptimalkan *query* ke *server*.
+Dari contoh di atas, kita dapat melihat bahwa penggunaan `useQuery` lebih mudah dan efisien dibandingkan dengan melakukan _caching_ secara manual. Dengan menggunakan `useQuery`, kita dapat mengelola _state_ dengan lebih baik dan mengoptimalkan _query_ ke _server_.
 
-Kelebihihan lain apabila kita menggunakan Tanstack Query adalah di bagian `const { isPending, error, data, isFetching } = useQuery`. Kita bisa menggunakan banyak *hooks* yang disediakan oleh Tanstack Query. Antara lain:
+Kelebihihan lain apabila kita menggunakan Tanstack Query adalah di bagian `const { isPending, error, data, isFetching } = useQuery`. Kita bisa menggunakan banyak _hooks_ yang disediakan oleh Tanstack Query. Antara lain:
 
 ```typescript
 data,
@@ -129,73 +129,72 @@ Yang dokumentasinya bisa dilihat di [sini](https://tanstack.com/query/latest/doc
 
 Apabila ingin mencoba langsung bisa ke [sini](https://codesandbox.io/p/devbox/goofy-field-lskn7u?file=%2Fsrc%2Findex.jsx%3A31%2C3-33%2C62)
 
-#### UseMutation 
+#### UseMutation
 
 ```typescript
 const { mutateAsync, isLoading, isSuccess, isError } = useMutation(
-    () =>
-      fetch("https://jsonplaceholder.typicode.com/todos", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-        body: JSON.stringify({
-          userId: 1,
-          title: todo,
-          completed: false,
-        }),
-      }).then((res) => res.json()),
-    {
-      onSuccess(data) {
-        console.log("Succesful", { data });
+  () =>
+    fetch("https://jsonplaceholder.typicode.com/todos", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
       },
-      onError(error) {
-        console.log("Failed", { error });
-      },
-      onSettled() {
-        console.log("Mutation completed.");
-      },
-    }
-  );
+      body: JSON.stringify({
+        userId: 1,
+        title: todo,
+        completed: false,
+      }),
+    }).then((res) => res.json()),
+  {
+    onSuccess(data) {
+      console.log("Succesful", { data });
+    },
+    onError(error) {
+      console.log("Failed", { error });
+    },
+    onSettled() {
+      console.log("Mutation completed.");
+    },
+  }
+);
 ```
 
-- `useMutation` adalah *hook* yang digunakan untuk melakukan *mutation* ke *server*.
-- `onSuccess` adalah *function* yang akan dijalankan apabila *mutation* berhasil.
-- `onError` adalah *function* yang akan dijalankan apabila *mutation* gagal.
-- `onSettled` adalah *function* yang akan dijalankan apabila *mutation* selesai.
-- `mutation` adalah *object* yang berisi *state* dari *mutation*.
+- `useMutation` adalah _hook_ yang digunakan untuk melakukan _mutation_ ke _server_.
+- `onSuccess` adalah _function_ yang akan dijalankan apabila _mutation_ berhasil.
+- `onError` adalah _function_ yang akan dijalankan apabila _mutation_ gagal.
+- `onSettled` adalah _function_ yang akan dijalankan apabila _mutation_ selesai.
+- `mutation` adalah _object_ yang berisi _state_ dari _mutation_.
 
-Apabila kita tulis kode di tanpa menggunakan `useMutation`, maka kita harus melakukan *mutation* secara manual.
+Apabila kita tulis kode di tanpa menggunakan `useMutation`, maka kita harus melakukan _mutation_ secara manual.
 
 ```typescript
-const [data, setData] = useState(null)
-const [error, setError] = useState(null)
-const [isLoading, setIsLoading] = useState(false)
-
+const [data, setData] = useState(null);
+const [error, setError] = useState(null);
+const [isLoading, setIsLoading] = useState(false);
 
 const fetchData = async () => {
-  setIsLoading(true)
+  setIsLoading(true);
   try {
-    const res = await axios.post('https://jsonplaceholder.typicode.com/todos', {
+    const res = await axios.post("https://jsonplaceholder.typicode.com/todos", {
       userId: 1,
       title: todo,
-      completed: false
-    })
-    setData(res.data)
+      completed: false,
+    });
+    setData(res.data);
   } catch (err) {
-    setError(err)
+    setError(err);
   }
-  setIsLoading(false)
-}
+  setIsLoading(false);
+};
 ```
 
-Dari contoh di atas, kita dapat melihat bahwa penggunaan `useMutation` lebih mudah dan efisien dibandingkan dengan melakukan *mutation* secara manual. Dengan menggunakan `useMutation`, kita dapat mengelola *state* dengan lebih baik dan mengoptimalkan *mutation* ke *server*.
+Dari contoh di atas, kita dapat melihat bahwa penggunaan `useMutation` lebih mudah dan efisien dibandingkan dengan melakukan _mutation_ secara manual. Dengan menggunakan `useMutation`, kita dapat mengelola _state_ dengan lebih baik dan mengoptimalkan _mutation_ ke _server_.
 
 Contoh penggunaan `useMutation` bisa dilihat di [sini](https://codesandbox.io/p/sandbox/usemutation-demo-forked-2jc56n)
 
 #### Optimalisasi Query dengan Tanstack Query
 
-Untuk melihat bagaimana Tanstack Query mengoptimalkan query, kita bisa contoh artiker berikut: 
+Untuk melihat bagaimana Tanstack Query mengoptimalkan query, kita bisa contoh artiker berikut:
 
 - [Inside React Query](https://tkdodo.eu/blog/inside-react-query)
 
@@ -223,17 +222,16 @@ Table adalah sebuah komponen yang terkadang menyulitkan dalam pengembangan aplik
 React Hook Form adalah library yang digunakan untuk membuat form dengan cara yang lebih deklaratif dan mudah dipahami. Library ini memiliki beberapa kegunaan yang dapat mempermudah pengembangan aplikasi web. Berikut adalah beberapa kegunaan dari library React Hook Form:
 
 1. Performant:
-  React Hook Form dirancang untuk performa yang tinggi. Library ini memungkinkan pengembang untuk membuat form dengan cara yang efisien, sehingga aplikasi dapat berjalan dengan cepat dan responsif.
+   React Hook Form dirancang untuk performa yang tinggi. Library ini memungkinkan pengembang untuk membuat form dengan cara yang efisien, sehingga aplikasi dapat berjalan dengan cepat dan responsif.
 2. Flexible:
-  Library ini memiliki banyak fitur yang dapat disesuaikan dengan kebutuhan pengembang. Pengembang dapat mengatur form sesuai dengan kebutuhan aplikasi, sehingga form dapat berfungsi dengan baik dan sesuai dengan harapan.
+   Library ini memiliki banyak fitur yang dapat disesuaikan dengan kebutuhan pengembang. Pengembang dapat mengatur form sesuai dengan kebutuhan aplikasi, sehingga form dapat berfungsi dengan baik dan sesuai dengan harapan.
 3. Extensible:
-  React Hook Form memiliki banyak fitur yang dapat diperluas. Pengembang dapat menambahkan fitur-fitur tambahan ke form sesuai dengan kebutuhan aplikasi, sehingga form dapat berfungsi dengan lebih baik dan sesuai dengan harapan.
-  Contoh : `Controller`, `useForm`, `useFieldArray`, `useWatch`, `useFormState`, `useFormContext`, `useController`, `useFieldArray`, `useWatch`, `useFormState`, `useFormContext`, `useController`
+   React Hook Form memiliki banyak fitur yang dapat diperluas. Pengembang dapat menambahkan fitur-fitur tambahan ke form sesuai dengan kebutuhan aplikasi, sehingga form dapat berfungsi dengan lebih baik dan sesuai dengan harapan.
+   Contoh : `Controller`, `useForm`, `useFieldArray`, `useWatch`, `useFormState`, `useFormContext`, `useController`, `useFieldArray`, `useWatch`, `useFormState`, `useFormContext`, `useController`
 4. Easy-to-use Validation:
-  Library ini menyediakan cara yang mudah untuk melakukan validasi form. Pengembang dapat menentukan aturan validasi form dengan mudah, sehingga form dapat berfungsi dengan baik dan sesuai dengan harapan.
+   Library ini menyediakan cara yang mudah untuk melakukan validasi form. Pengembang dapat menentukan aturan validasi form dengan mudah, sehingga form dapat berfungsi dengan baik dan sesuai dengan harapan.
 5. Integrasi Dengan Berbagai Backend:
-  Dengan React Hook Form, pengembang dapat dengan mudah mengintegrasikan form dengan berbagai backend dan sumber data, termasuk REST API, GraphQL, dan banyak lagi.
-
+   Dengan React Hook Form, pengembang dapat dengan mudah mengintegrasikan form dengan berbagai backend dan sumber data, termasuk REST API, GraphQL, dan banyak lagi.
 
 ### Penggunaan React Hook Form
 
@@ -242,8 +240,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   console.log(watch("example")); // watch input value by passing the name of it
 
@@ -268,10 +271,9 @@ File : Input.tsx
 
 ```typescript
 import React from "react";
-import {useFormContext} from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 export default function Input({ name, label, ...rest }) {
-
   const methods = useFormContext();
 
   const { register } = methods;
@@ -329,20 +331,20 @@ Inti dari pengembangan aplikasi web adalah pengelolaan state. State Management a
 
 ### Perbandingan Context API, Redux, dan Zustand
 
-| Fitur                | Context API                                    | Redux                                                         | Zustand                                       |   |
-|----------------------|------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------|---|
-| Kemudahan Penggunaan | Mudah digunakan, terutama untuk aplikasi kecil | Lebih kompleks, membutuhkan waktu belajar                     | Sederhana dan mudah dipahami, mirip Redux     |   |
-| Skalabilitas         | Kurang skalabel untuk aplikasi besar           | Sangat skalabel untuk aplikasi besar                          | Cukup skalabel untuk aplikasi menengah        |   |
-| Performa             | Cukup performant                               | Performant                                                    | Sangat performant                             |   |
-| Fitur                | Fitur bawaan terbatas                          | Fitur lengkap, termasuk middleware, devtools, dan time travel | Fitur inti state management, tanpa middleware |   |
-| Boilerplate          | Sedikit boilerplate                            | Banyak boilerplate                                            | Sedikit boilerplate                           |   |
-| Komunitas            | Komunitas besar dan aktif                      | Komunitas besar dan aktif                                     | Komunitas sedang berkembang                   |   |
+| Fitur                | Context API                                    | Redux                                                         | Zustand                                       |     |
+| -------------------- | ---------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------- | --- |
+| Kemudahan Penggunaan | Mudah digunakan, terutama untuk aplikasi kecil | Lebih kompleks, membutuhkan waktu belajar                     | Sederhana dan mudah dipahami, mirip Redux     |     |
+| Skalabilitas         | Kurang skalabel untuk aplikasi besar           | Sangat skalabel untuk aplikasi besar                          | Cukup skalabel untuk aplikasi menengah        |     |
+| Performa             | Cukup performant                               | Performant                                                    | Sangat performant                             |     |
+| Fitur                | Fitur bawaan terbatas                          | Fitur lengkap, termasuk middleware, devtools, dan time travel | Fitur inti state management, tanpa middleware |     |
+| Boilerplate          | Sedikit boilerplate                            | Banyak boilerplate                                            | Sedikit boilerplate                           |     |
+| Komunitas            | Komunitas besar dan aktif                      | Komunitas besar dan aktif                                     | Komunitas sedang berkembang                   |     |
 
 - Context API: Cocok untuk aplikasi kecil dan sederhana.
 - Redux: Cocok untuk aplikasi besar dan kompleks yang membutuhkan skalabilitas dan fitur lengkap.
 - Zustand: Cocok untuk aplikasi menengah yang menginginkan performa dan kemudahan penggunaan.
 
-Dari perbandingan di atas, kita bisa melihat bahwa masing-masing state management memiliki kelebihan dan kekurangan. Karena project kita ada di skala menengah, maka kita akan menggunakan Zustand. 
+Dari perbandingan di atas, kita bisa melihat bahwa masing-masing state management memiliki kelebihan dan kekurangan. Karena project kita ada di skala menengah, maka kita akan menggunakan Zustand.
 
 ### Penggunaan Zustand
 
@@ -364,7 +366,7 @@ export const useStore = create<State>((set) => ({
 
 Dari contoh di atas, kita bisa melihat bahwa penggunaan Zustand sangat mudah dan efisien. Dengan menggunakan Zustand, kita bisa membuat state management yang performant dan mudah dipahami.
 
-Bagaiaman cara memanggil `useStore` di component lain? 
+Bagaiaman cara memanggil `useStore` di component lain?
 
 ```typescript
 import { useStore } from "./store";
@@ -382,7 +384,7 @@ export default function Counter() {
 }
 ```
 
-Bagaimana tampilan apabila kita menggunakan React Context API? 
+Bagaimana tampilan apabila kita menggunakan React Context API?
 
 ```typescript
 import React, { createContext, useContext, useReducer } from "react";
@@ -485,7 +487,7 @@ Beberapa contoh framework frontend:
 6. Backbone
 
 | Fitur          | Next.js                                    | Vue                                        | Angular                                    | Svelte                             | Ember                                   | Backbone                            |
-|----------------|--------------------------------------------|--------------------------------------------|--------------------------------------------|------------------------------------|-----------------------------------------|-------------------------------------|
+| -------------- | ------------------------------------------ | ------------------------------------------ | ------------------------------------------ | ---------------------------------- | --------------------------------------- | ----------------------------------- |
 | Tipe Framework | React Framework                            | Standalone Framework                       | Standalone Framework                       | Compiler                           | Standalone Framework                    | MVC Library                         |
 | Kurva Belajar  | Sedang                                     | Mudah                                      | Sulit                                      | Mudah                              | Sedang                                  | Sedang                              |
 | Skalabilitas   | Tinggi                                     | Tinggi                                     | Tinggi                                     | Tinggi                             | Sedang                                  | Rendah                              |
@@ -537,15 +539,15 @@ Bagaimana Cara Membuat Sitemap?
 
 ![Sitemap](./assets/modul-2/sitemap.webp)
 
-Apabila teman-teman menggunakan Next.js, maka teman-teman bisa menggunakan `next-sitemap` untuk membuat sitemap. 
+Apabila teman-teman menggunakan Next.js, maka teman-teman bisa menggunakan `next-sitemap` untuk membuat sitemap.
 
 ```typescript
 // next.config.js
 module.exports = {
-  siteUrl: 'https://example.com',
+  siteUrl: "https://example.com",
   generateRobotsTxt: true,
   sitemapSize: 5000,
-}
+};
 ```
 
 Apabila teman-teman menggunakan React, maka teman-teman bisa menggunakan `react-router-sitemap` untuk membuat sitemap.
@@ -562,7 +564,6 @@ Bagaimana Cara Membuat Robots.txt?
 
 Apabila teman-teman menggunakan Next.js, maka teman-teman bisa melihat documetasi [next-robots](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots)
 
-
 ### Open Graph
 
 ![Open Graph](./assets/modul-2/open-graph.jpeg)
@@ -575,3 +576,36 @@ Selain itu, Open Graph juga membantu website Anda terlihat lebih menarik di hasi
 
 Dokumentasi Open Graph bisa dilihat di [sini](https://ogp.me/)
 
+## Tugas
+
+Kembangkan aplikasi media sosial berbasis teks di tugas sebelumnya dengan struktur dan arsitektur yang lebih modern, rapi, dan scalable yang mengikuti ketentuan berikut:
+
+1. Refactor kode dari tugas sebelumnya menjadi aplikasi berbasis framework/library modern (React/Vue/Svelte/dll) dan memperbaiki tampilan agar lebih menarik
+2. Memanfaatkan library dan menerapkan 1 fitur yang menarik dari library tersebut
+3. Mengutilisasi SEO semaksimal mungkin
+4. Mengimplementasikan autentikasi (Login/Register)
+5. Mengintegrasikan Fitur buat, ubah, hapus, like, dan tampilkan semua postingan.
+
+Akan lebih baik jika Anda dapat mengimplementasikan fitur-fitur tambahan seperti berikut:
+
+1. Threaded Posts (CRUD): Buat thread utama dan memungkinkan pengguna untuk membalas thread/post secara berurutan (nested).
+2. Mengimplementasikan load post secara dinamis saat user scroll ke bawah.
+3. Implementasi drag & drop untuk menghapus postingan.
+
+Berikut adalah batasan-batasan yang perlu diperhatikan dalam mengerjakan tugas berikut:
+
+1. Boleh menggunakan framework modern (React, Vue, Next.js, Nuxt, Svelte, dsb).
+2. Boleh menggunakan library UI seperti shadcn/ui, Tailwind, atau Chakra UI.
+3. Boleh menggunakan library tambahan untuk animasi, state management, drag-drop, dsb.
+4. Pastikan struktur kode bersih, modular, dan rapi.
+5. Dokumentasi API beserta URL API dapat diakses melalui [link berikut](https://links.labse.id/go/dokumentasi-api-tugas2-fe)
+
+### Perlu Bantuan?
+
+Teman - teman bisa bertanya di grup atau langsung ke asisten terkait. Jangan sungkan untuk bertanya karena kita disini saling belajar.
+
+Atau bisa juga langsung bertanya - tanya di grup WA.
+
+## Penutup
+
+Sekian dari kita, semoga materi ini bermanfaat bagi teman - teman semua. Jangan lupa untuk selalu berlatih dan jangan pernah menyerah. Kita disini saling belajar dan saling bantu. Sampai jumpa di pertemuan selanjutnya. Terima kasih.
